@@ -25,4 +25,4 @@ Its a Instagram-like social network where users can buy clothes.
   - Have a backoffice
 
 
-## Technologies Used: Ruby on Rails, Javascript, AJAX, SQLlite, Bootstrap 
+### Technologies Used: Ruby on Rails, Javascript, AJAX, SQLlite, Bootstrap 
