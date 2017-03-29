@@ -1,0 +1,11 @@
+- if user_signed_in? && current_user.AdminPermissions
+    = render 'admin/backoffice'
+- else
+    #posts
+        = render 'posts'
+        - if user_signed_in?
+            - if current_user.following.count == 0
+                .h3.col-md-12.text-center Ainda não segues ninguem. Procura novas pessoas na página Explorar
+                %br
+    #paginator.text-center
+        = link_to_next_page @posts, 'CARREGAR MAIS', remote: true, id:'load_more'

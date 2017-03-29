@@ -1,0 +1,12 @@
+= render 'post', post: @post
+        
+- if user_signed_in? && @post.user.id == current_user.id
+    .text-center
+        = render 'clothes/new'
+    .text-center.edit-links
+        = link_to "Apagar publicação", post_path(@post), method: :delete, data: { confirm: "Tem a certeza que quer apagar a publicação?" }
+        |
+        = link_to "Voltar", root_path
+- else
+    .text-center.edit-links
+        = link_to "Voltar", root_path

@@ -1,0 +1,489 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #fafafa;
+    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica,sans-serif;
+}
+
+
+.registration-bg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding-top: 4em;
+    height: 1000px;
+    background-image: image-url('background-registar.jpg');
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.login-bg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding-top: 4em;
+    height: 1000px;
+    background-image: image-url('background-login.jpg');
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.input-lg {
+    font-size: 15px;
+    width: 60%;
+    text-align:center;
+}
+
+.log-in{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
+/* #NAVBAR */
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.alert {
+    margin-bottom: 0px;
+}
+
+.navbar-brand {
+    height: 80px;
+    line-height: 45px;
+    text-align: center;
+    a {
+        color: #125688;
+    }
+}
+
+.navbar-default {
+    background-color: #fff;
+    height: 80px;
+    line-height: 45px;
+    text-align: center;
+    .navbar-nav li a {
+        color: #125688;
+    }
+}
+
+.navbar-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* #POSTS */
+
+.posts-wrapper {
+    padding-top: 25px;
+    margin: 0 auto;
+    max-width: 642px;
+    width: 100%;
+}
+
+.post {
+    background-color: #fff;
+    border-color: #edeeee;
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    margin-bottom: 20px;
+    .post-head {
+        flex-direction: row;
+        height: 64px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 24px;
+        color: #125688;
+        font-size: 15px;
+        line-height: 18px;
+        .user-name, .time-ago {
+            display: inline;
+        }
+        .user-name {
+            font-weight: 500;
+        }
+        .time-ago {
+            color: #A5A7AA;
+            float: right;
+        }
+    }
+    .image{
+        border-bottom: 1px solid #eeefef;
+        border-top: 1px solid #eeefef;
+    }
+}
+
+.post-head {
+    height: 64px;
+    padding: 22px 20px;
+    color: #125688;
+    font-size: 15px;
+    line-height: 18px;
+    .thumbnail{}
+    .name { 
+        display: block;
+    }
+}
+
+.post-bottom {
+    .user-name, .comment-content {
+        display: inline;
+    }
+    .caption {
+        margin-bottom: 7px;
+    }
+    .user-name {
+        font-weight: 500;
+        margin-right: 0.3em;
+        color: #125688;
+        font-size: 15px;
+    }
+    .user-name, .caption-content {
+        display: inline;
+    }
+    #comment {
+        margin-top: 7px;
+        .user-name {
+            font-weight: 500;
+        }
+        .delete-comment {
+            float: right;
+            color: #515151;
+        } 
+    }
+    margin-bottom: 7px;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+#image-preview {
+    margin: 0px auto;
+}
+
+#post_image {
+    padding: 1em;
+    margin: 0px auto;
+}
+
+.comment-content {
+    font-size: 15px;
+    border: medium none;
+    width: 100%;
+    color: #4B4F54;
+}
+
+.comment-like-form {
+    padding-top: 24px;
+    margin-top: 13px;
+    margin-left: 24px;
+    margin-right: 24px;
+    min-height: 68px;
+    align-items: center;
+    border-top: 1px solid #EEEFEF;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.comment-form {
+    input { 
+        border: none; 
+        width:100%; 
+        outline:none; 
+    }
+}
+
+
+.image {
+    border-bottom: 1px solid #eeefef;
+    border-top: 1px solid #eeefef;
+}
+
+.caption {
+    font-size: 15px;
+}
+
+/* NEW e EDIT views*/
+
+.form-wrapper {
+    width: 52%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #eeefef;
+    border-radius: 3px;
+}
+
+.edit-links {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+/* INDEX */
+
+#paginator {
+    color: #4090DB;
+    height: 140px;
+    width: 140px;
+    margin: 60px auto 40px;
+    position: relative;
+    display: table;
+    border: 2px solid #4090DB;
+    border-radius: 50%;
+    :hover {
+        border: 1px solid #2D6DA8;
+        border-radius: 90%;
+    }
+}
+
+#load_more {
+    display: table-cell;
+    font-size: 14px;
+    padding: 0px 9px;
+    vertical-align: middle;
+    text-decoration: none;
+    a :hover {
+        color: #2D6DA8;
+    }
+}
+
+.form-group {
+    input { 
+        width:100%; 
+        outline:none; 
+        text-align: center;
+        border: 1px solid LightSkyBlue;
+        border-radius: 5px;
+    }
+}
+
+/* Perfil */
+
+#user_bio {
+  border: 1px solid gray;
+}
+
+#user_avatar {
+    padding: 1em;
+    margin: 0px auto;
+}
+
+.btngroup{
+        input { 
+        width:40%; 
+        text-align: center;
+    }
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.formtext {
+        input { 
+        width:100%; 
+        outline:none; 
+        text-align: center;
+        border: 1px solid LightSkyBlue;
+        border-radius: 5px;
+    }
+}
+
+.profile-header {
+    padding: 20px 0;
+}
+.profile-image {
+    margin: 20px auto;
+    height: 152px;
+    width: 152px;
+}
+.user-name-and-follow {
+    display: inline;
+}
+.profile-user-name {
+    display: inline;
+}
+.edit-button {
+    border-color: #818488;
+    color: #818488;
+    margin-left: 20px;
+}
+.profile-bio {
+    margin-top: 20px;
+}
+
+.likes {
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+.like {
+    margin-top:-5px;
+    text-decoration: none;
+    font-size: 2.2em;
+    color: red;
+}
+
+.like-button a:hover, a:focus {
+    text-decoration: none;
+    color: red;
+}
+
+.thumb-img {
+    margin-top: -12px;
+    img{
+        position: absolute;
+        height: 40px;
+        width: 40px;  
+    }
+}
+
+.follow-button {
+    text-transform: uppercase;
+    border-color: #4090db;
+    color: #4090db;
+    margin-left: 20px;
+    &:visited, &:focus, &:hover {
+        border-color: #2D6396;
+        color: #2D6396;
+    }
+}
+
+.unfollow-button {
+    text-transform: uppercase;
+    border-color: #66bd2b;
+    background-color: #66bc2b;
+    color: white;
+    margin-left: 20px;
+    &:visited, &:focus, &:hover {
+        border-color: #47821F;
+        background-color: #47821F;
+        color: white;
+    }
+}
+
+ .panel.panel-info.col-sm-5 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+ }
+ 
+.enjoy-css {
+  width: 225px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0 auto;
+  border: .5px solid rgb(232, 238, 241);
+  color: rgb(119, 126, 128);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0);
+}
+
+/* enable absolute positioning */
+.enjoy-cssx {
+  width: 225px;
+  height: 30px;
+  background: rgb(255, 255, 255);
+}
+
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 7px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.flex { display:flex }
+.flex.flex-column { flex-direction: column; }
+.flex.flex-row { flex-direction: row; }
+.flex.justify-center { justify-content: center; }
+.flex.justify-left { justify-content: flex-start; }
+.flex.justify-right { justify-content: flex-end; }
+.flex.align-center { align-items: center; }
+.flex.align-left { align-items: flex-start; }
+.flex.align-right { align-items: flex-end; }
+
+/* Navigation */
+#top-navigation a,
+#top-navigation .cart-info {
+    width: 100%;
+}
+
+#top-navigation .cart-info .stats { margin-right: 5px; }
+
+/* Products */
+#users .user img { background-color: #000; }
+#users .user p.lead { margin-bottom: 0; }
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+.cardusers {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em; 
+  
+}
+
+.carduser {
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%; 
+}

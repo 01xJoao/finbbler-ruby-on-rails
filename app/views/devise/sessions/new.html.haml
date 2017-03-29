@@ -1,0 +1,15 @@
+.login-bg
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        .log-in.panel
+          .panel-heading
+            %h2 Entrar
+          = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            = f.error_notification
+            .panel-body
+              = f.input :email, required: true, autofocus: true, label: false, placeholder: 'email', input_html: { class: 'input-lg' }
+              %br
+              = f.input :password, required: true, label: false, placeholder: 'password', input_html: { class: 'input-lg' }
+              %br
+              = f.button :submit, "entrar", class: 'btn-lg btn-info btn-block'

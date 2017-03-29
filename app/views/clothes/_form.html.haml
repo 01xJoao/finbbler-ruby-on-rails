@@ -1,0 +1,29 @@
+= form_for([@post, @post.clothes.new], remote: true) do |f|
+  .container
+    #box.mainbox.col-md-8.col-md-offset-2
+      .panel.panel-success
+        .panel-heading
+          .panel-title Adicionar peça de roupa
+        .panel-body{:style => "padding-top:30px"}
+          %form#clotheform.form-horizontal{:role => "form"}
+            .input-group{:style => "margin-bottom: 25px"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon-tag
+              = f.text_field :clothe_name, placeholder: 'ex: Calças de ganga', class: "form-control", id: "clothe_clothename_#{@post.id}"
+            .input-group{:style => "margin-bottom: 25px"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon.glyphicon-euro
+              = f.text_field :price, placeholder: 'Preço', class: "form-control", id: "clothe_price_#{@post.id}"
+            .input-group{:style => "margin-bottom: 25px"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon.glyphicon-home
+              = f.text_field :store_name, placeholder: 'ex: Zara', class: "form-control", id: "clothe_storename_#{@post.id}"
+            .input-group{:style => "margin-bottom: 25px"}
+              %span.input-group-addon
+                %i.glyphicon.glyphicon.glyphicon-globe
+              = f.text_field :store_link, placeholder: 'http://www.', class: "form-control", id: "clothe_storelink_#{@post.id}"
+            .form-group{:style => "margin-top:10px"}
+              .col-sm-12.controls
+                = f.button(type: 'submit', class: "btn btn-success") do
+                  %i.icon-ok.icon-white
+                  Adicionar Peça

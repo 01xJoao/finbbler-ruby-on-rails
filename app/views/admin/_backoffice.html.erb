@@ -1,0 +1,61 @@
+<h1> Utilizadores </h1>
+<br>
+<div id="users" class="row cardusers">
+    <% @users.each do |user| %>
+        <div class="carduser">
+            <div class="thumbnail">
+                <div class="group list-group-image" style="margin-top: 20px"><%= profile_avatar_select(user)%></div>
+                <div class="caption">
+                    <h4 class="group inner list-group-user-heading"><%= user.user_name %></h4>
+                    <p class="group inner list-group-user-text"><%= user.bio %></p>
+                    <p class="group inner list-group-user-text"><%= user.email %></p>
+                    <br>
+                    <div class="row flex flex-row align-center">
+                        <div class="col-xs-6">
+                            <p class="lead small"><%=user.posts.count%> Publicações</p>
+                        </div>
+                        <div class="col-xs-8 flex flex-row align-center justify-right">
+                            <%= button_to 'Visitar', user.user_name, :class => 'btn btn-success btn-sm', :method => :get %>&nbsp
+                            <%= button_to "Apagar", admin_destroy_user_path(user),:class => 'btn btn-danger btn-sm' ,data: { confirm: "Tem a certeza?" }, method: :delete %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
+<!--
+<div id="app">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Manager</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="user in users">
+                <td>{{ user.user_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.bio }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+#app
+        %table
+            %thead
+                %tr
+                    %th Name
+                    %th Email
+                    %th Manager
+            %tbody
+                %tr{"v-for" => "user in users"}
+                    %td {{ user.user_name }}
+                    %td {{ user.email }}
+                    %td {{ user.bio }}
+                    
+-->

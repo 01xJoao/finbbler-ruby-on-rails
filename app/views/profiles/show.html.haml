@@ -1,0 +1,29 @@
+.posts-wrapper
+    .row.profile-header
+        .col-md-5
+            .img-circle
+                = profile_avatar_select(@user)
+        .col-md-7
+            .user-name-and-follow
+                %h3.profile-user-name
+                    = @user.user_name
+                %span
+                    - if @user == current_user
+                        = link_to 'Editar Perfil', edit_profile_path(@user.user_name), class: 'btn edit-button btn-sm'
+                    - else
+                        - if current_user_is_following(current_user.id, @user.id)
+                            = link_to 'A Seguir', unfollow_user_path, remote: true, class: 'btn unfollow-button btn-sm', id: 'unfollow-button', method: :post
+                        - else
+                            = link_to 'Segue', follow_user_path, remote: true, class: 'btn follow-button btn-sm', id: 'follow-button', method: :post
+            %p.profile-bio
+                = @user.bio
+            .user-statistics{:style => "margin-top:20px;"}
+                %p
+                    %b=pluralize(@user.posts.count,'Publicação','Publicações')
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    %b=pluralize(@user.followers.count,'Seguidor','Seguidores')
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  
+                    %b=pluralize(@user.following.count,'A Seguir','A Seguir')
+    
+-@posts.each do |post|
+    = render 'posts/post', post: post

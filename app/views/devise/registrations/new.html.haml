@@ -1,0 +1,20 @@
+.registration-bg
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        .log-in.panel
+          .panel-heading
+            %h2 Cria a tua conta
+          = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+            = f.error_notification
+            .panel-body
+              = f.input :user_name, required: true, label: false, placeholder: 'nome de utilizador', input_html: { class: 'input-lg'}
+              %br
+              = f.input :email, required: true, autofocus: true,label: false, placeholder: 'email', input_html: { class: 'input-lg' }
+              %br
+              = f.input :password, required: true, label: false,placeholder: 'password', input_html: { class: 'input-lg' }
+              %br
+              = f.input :password_confirmation, required: true,label: false, placeholder: 'confirma a password', input_html: {class: 'input-lg' }
+              - 2.times do 
+                %br
+              = f.button :submit, "registar", class: 'btn-lg btn-info btn-block'

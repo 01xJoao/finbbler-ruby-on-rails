@@ -1,0 +1,29 @@
+%nav.navbar.navbar-default
+    .navbar-container
+        .navbar-brand
+            = link_to image_tag( 'logo_colors.png', style: 'width: 200px; position: absolute; margin-top: -6px'), 'http://localhost:3000' 
+        .navbar-header.col-md-2.col-md-offset-4.collapse.navbar-collapse{ style: 'margin-top: 23px;'}
+            = form_tag search_users_path do
+                .inner-addon.right-addon.enjoy-cssx
+                    %i.glyphicon.glyphicon-search
+                    %input.form-control.enjoy-css{:name => "query", :autoclomplete => "off" ,:placeholder => "Procurar", :type => "text"}/
+    .collapse.navbar-collapse#bs-navbar-collapse-2
+        %ul.nav.navbar-nav.navbar-right.some{ style: 'margin-top: 12px; margin-right: 200px' }
+            - if user_signed_in?
+                -if current_user.AdminPermissions
+                    %li
+                        = link_to image_tag( 'cog.png', :title => "Admin"), root_path
+                %li
+                    = link_to image_tag( 'explore.png', :title => "Explorar", style: 'width: 24px;'), browse_posts_path
+                -if !current_user.AdminPermissions
+                    %li
+                        = link_to image_tag( 'post.png', :title => "Publicar", style: 'width: 24px;'), new_post_path
+                    %li
+                        = link_to image_tag( 'profile.png', :title => "Perfil", style: 'width: 24px;'), profile_path(current_user.user_name)
+                %li
+                    = link_to image_tag( 'logout.png', :title => "Sair", style: 'width: 24px;'), destroy_user_session_path, method: :delete
+            - else
+                %li
+                    = link_to "Entrar", new_user_session_path
+                %li
+                    = link_to "Registar", new_user_registration_path

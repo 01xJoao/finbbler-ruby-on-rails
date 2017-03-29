@@ -1,0 +1,21 @@
+.posts-wrapper
+    .post
+        .post-body
+            .image-wrap
+                = form_for @user, url: {action: "update"}, html: {multipart: true } do |f|
+                    .row
+                        .col-md-12
+                            .form-group.text-center
+                                %h4 Alterar imagem de perfil
+                                .img-circle
+                                    = profile_avatar_select(@user)
+                            .btngroup.text-center
+                                = f.file_field :avatar, onChange: 'loadFile(event)'
+                    .row
+                        .col-md-12
+                            .form-group.text-center
+                                %h4 Atualizar descrição
+                            .formtext.text-center
+                                = f.text_area :bio, label: false, rows: 4, cols: 70
+                    .btngroup.text-center
+                        = f.submit "Atualizar", class: 'btn btn-success'

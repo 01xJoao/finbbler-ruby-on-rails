@@ -1,0 +1,9 @@
+.text-center
+    = image_tag @post.image.url(:medium)
+    
+= render 'form'
+
+.text-center.edit-links
+    = link_to "Apagar Imagem", post_path(@post), method: :delete, data: { confirm: "Nao é esta pagina!!!!!" }
+    |
+    = link_to "Voltar", post_path(@post)
