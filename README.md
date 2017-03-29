@@ -13,7 +13,7 @@ Users can:
   - Create Posts
   - Like Posts
   - Comment Posts
-  - Remove coments
+  - Remove comments
   - Follow other users
   - Have a personal page
  
