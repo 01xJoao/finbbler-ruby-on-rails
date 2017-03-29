@@ -11,6 +11,7 @@ Its a Instagram-like social network where users can buy clothes.
 ## Users can:
 
   - Create Posts
+  - Add clothes to Posts
   - Like Posts
   - Comment Posts
   - Remove comments
