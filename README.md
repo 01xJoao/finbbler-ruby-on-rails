@@ -8,7 +8,7 @@ This was one project I worked on my Masters Degree.
 Its a Instagram-like social network where users can buy clothes.
 
 
-#Users can:
+## Users can:
 
   - Create Posts
   - Like Posts
@@ -17,7 +17,7 @@ Its a Instagram-like social network where users can buy clothes.
   - Follow other users
   - Have a personal page
  
-#Administrators can:
+## Administrators can:
 
   - View users, posts
   - Remove Coments
@@ -25,4 +25,4 @@ Its a Instagram-like social network where users can buy clothes.
   - Have a backoffice
 
 
-#Technologies Used: Ruby on Rails, Javascript, AJAX, SQLlite, Bootstrap 
+## Technologies Used: Ruby on Rails, Javascript, AJAX, SQLlite, Bootstrap 
