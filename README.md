@@ -23,3 +23,6 @@ Administrators can:
   - Remove Coments
   - Delete users
   - Have a backoffice
+
+
+Technologies Used: Ruby on Rails, Javascript, AJAX, SQLlite, Bootstrap 
